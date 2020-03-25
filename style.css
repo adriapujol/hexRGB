@@ -27,7 +27,8 @@ body {
 .inputs {
     display: flex;
     justify-content: space-between;
-    width: 800px;
+    /* width: 800px; */
+    width: 70%;
     margin: 10px 0px;
     
 }
@@ -73,7 +74,8 @@ button:focus {
     justify-content: center;
     align-items: center;
     height: 500px;
-    width: 800px;
+    /* width: 800px; */
+    width: 70%;
     background-color: #FF0000;
 }
 
