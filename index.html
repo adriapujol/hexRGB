@@ -9,12 +9,33 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <div class="container">
+            <div class="title"><span>HEX to RGB</span></div>
+            <div class="inputs">
+                <div>#
+                    <input type="text" class="hex" id="rgb">
+                    <button class="btn-invert" id="btn-invert">Invert</button>
+                    <button class="btn-rgb" id="btn-rgb">RGB</button>
+                </div>
+                <!-- <p>
+                    rgb(
+                    <input type="text" class="rgb" id="hex">
+                    )
+                </p> -->
+            </div>
+            <div class="color" id="color">
+                <h1 class="color-text">#FF0000</h1>
+            </div>
+            <footer>
+                <p>
+                    by adrienhill
+                </p>
+            </footer>
+        </div>
         
         <script src="script.js" async defer></script>
     </body>
