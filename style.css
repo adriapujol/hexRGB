@@ -123,6 +123,10 @@ footer p {
     .inputs button {
         font-size: 0.7em;
     }
+
+    .color-text {
+        font-size: 0.9em;
+    }
 }
 
 @media only screen and (max-height: 666px ) {
