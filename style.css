@@ -42,7 +42,7 @@ body {
 }
 
 input:focus {
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
 }
 
 .inputs button {
@@ -51,8 +51,11 @@ input:focus {
     background: none;
     color:black;
     height: 30px;
-    font-size: larger;
+    font-size: 1em;
     margin: 0px ;
+    text-transform: uppercase;
+    font-weight: lighter;
+
 }
 
 button:hover {
@@ -96,5 +99,26 @@ footer p {
 }
 
 
+@media only screen and (max-width: 680px ) {
+    .inputs {
+        flex-direction: column;
+        margin: 5px 0px;
+    }
 
+    .btn-block {
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 417px) {
+    .inputs button {
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-height: 666px ) {
+    .color {
+        height: 70vh;
+    }
+}
 
