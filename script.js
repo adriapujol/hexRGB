@@ -9,7 +9,7 @@ let colorText = document.getElementById("color-text");
 display.addEventListener('click', () => {
     if (isHexColor(hexNum.value)) {
         let inhex = invertHEX(hexNum.value);
-        colorText.innerHTML = `#${hexNum.value}`;
+        colorText.innerHTML = `#${hexNum.value.toUpperCase()}`;
         colorText.style.color = `#${inhex}`;
         color.style.backgroundColor = `#${hexNum.value}`;
     } else {
@@ -20,7 +20,7 @@ display.addEventListener('click', () => {
 invert.addEventListener('click', () => {
     if (isHexColor(hexNum.value)) {
         let ihex = invertHEX(hexNum.value);
-        colorText.innerHTML = `#${ihex}`;
+        colorText.innerHTML = `#${ihex.toUpperCase()}`;
         color.style.backgroundColor = `#${ihex}`;
         colorText.style.color = `#${hexNum.value}`;
     } else {
