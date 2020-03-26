@@ -7,37 +7,36 @@ let color = document.getElementById("color");
 let colorText = document.getElementById("color-text");
 
 display.addEventListener('click', () => {
-    if (hexNum.value.length !== 6) {
-        wrongHEX();
-    } else {
+    if (isHexColor(hexNum.value)) {
         let inhex = invertHEX(hexNum.value);
         colorText.innerHTML = `#${hexNum.value}`;
         colorText.style.color = `#${inhex}`;
         color.style.backgroundColor = `#${hexNum.value}`;
-        
+    } else {
+        wrongHEX(); 
     }
 });
 
 invert.addEventListener('click', () => {
-    if (hexNum.value.length !== 6) {
-        wrongHEX();
-    } else {
+    if (isHexColor(hexNum.value)) {
         let ihex = invertHEX(hexNum.value);
         colorText.innerHTML = `#${ihex}`;
         color.style.backgroundColor = `#${ihex}`;
         colorText.style.color = `#${hexNum.value}`;
+    } else {
+        wrongHEX();
     }
 });
 
 rgb.addEventListener('click', () => {
-    if (hexNum.value.length !== 6) {
-        wrongHEX();
-    } else {
+    if (isHexColor(hexNum.value)) {
         let rgbNumber = convert2RGB(hexNum.value);
         let invHEX = invertHEX(hexNum.value);
         colorText.innerHTML = `rgb(${rgbNumber.join(',')})`;
         colorText.style.color = `#${invHEX}`;
         color.style.backgroundColor = `#${hexNum.value}`;
+    } else {
+        wrongHEX();
     }
 
 });
@@ -81,3 +80,7 @@ const wrongHEX = () => {
     color.style.backgroundColor = "#000000";
     // alert("Not a valid number. Make sure it has 6 characters");
 };
+
+//IS HEX VALID
+
+isHexColor = hex => typeof hex === 'string' && hex.length === 6 && !isNaN(Number('0x' + hex));
